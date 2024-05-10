@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nekoz - Coming Soon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Montserrat:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.3.1/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .fade-in {
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .heading-font {
+            font-family: 'Pacifico', cursive;
+        }
+        .sub-heading-font {
+            font-family: 'Amatic SC', cursive;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+<header class="bg-pink-200 shadow py-4">
+    <div class="container mx-auto flex justify-center">
+        <div class="flex justify-end w-full max-w-screen-md">
+            <img src="../images/logo_2.png" alt="Nekoz Logo" class="h-8 mr-8">
+        </div>
+    </div>
+</header>
+
+<div class="text-center py-12 bg-pink-200 fade-in">
+    <h1 class="text-5xl font-bold text-gray-800 heading-font">Nekoz</h1>
+    <p class="text-xl mt-2 text-gray-700 sub-heading-font">Everything For Your Feline Friends - Coming Soon!</p>
+    <p class="text-lg font-semibold text-gray-800 mt-4">Get ready for purrfect deals soon!</p>
+</div>
+
+<section class="text-center my-10">
+    <h2 class="text-3xl font-semibold mb-6">Featured Products</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mx-auto px-4">
+        <!-- Product 1 -->
+        <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+            <img src="https://picsum.photos/200/200" alt="Product 1" class="mx-auto rounded-md mb-4">
+            <h3 class="font-semibold text-lg">Comfy Cat Hammock</h3>
+            <p class="text-sm text-gray-600 mt-2">Perfect for window-side lounging.</p>
+            <span class="mt-4 inline-block bg-gray-200 text-gray-800 py-2 px-4 rounded-full text-xs">Coming Soon</span>
+        </div>
+        <!-- Product 2 -->
+        <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+            <img src="https://picsum.photos/200/200" alt="Product 2" class="mx-auto rounded-md mb-4">
+            <h3 class="font-semibold text-lg">Interactive Laser Toy</h3>
+            <p class="text-sm text-gray-600 mt-2">Keep them entertained for hours.</p>
+            <span class="mt-4 inline-block bg-gray-200 text-gray-800 py-2 px-4 rounded-full text-xs">Coming Soon</span>
+        </div>
+        <!-- Product 3 -->
+        <div class="bg-white rounded-lg shadow-lg p-6 text-center">
+            <img src="https://picsum.photos/200/200" alt="Product 3" class="mx-auto rounded-md mb-4">
+            <h3 class="font-semibold text-lg">Luxury Cat Scratcher</h3>
+            <p class="text-sm text-gray-600 mt-2">Stylish and functional for your cat's pleasure.</p>
+            <span class="mt-4 inline-block bg-gray-200 text-gray-800 py-2 px-4 rounded-full text-xs">Coming Soon</span>
+        </div>
+    </div>
+</section>
+
+<!-- Enhanced Stay Notified Section with Lighter Background -->
+
+<section class="mt-16 bg-blue-100 text-center py-12">
+    <h2 class="text-4xl font-bold text-gray-800">Join Our Launch!</h2>
+    <p class="max-w-4xl mx-auto text-center text-lg text-gray-600 mt-8">Sign up to unlock exclusive launch deals and discounts for your feline friends.</p>
+    <form class="flex flex-col sm:flex-row justify-center items-center mt-6 gap-4">
+        <input type="email" placeholder="Enter your email address" required class="px-4 py-2 w-72 rounded-lg border-2 border-gray-200 focus:outline-none focus:border-blue-300" aria-label="Email for newsletter">
+        <button type="submit" class="px-6 py-2 bg-pink-500 text-white rounded-lg hover:bg-pink-400 focus:outline-none">Notify Me</button>
+    </form>
+</section>
+
+
+
+<!-- Moved About Us Section to end -->
+<div class="py-10 bg-gray-50">
+    <h2 class="text-center text-3xl font-semibold mb-6">About Us</h2>
+    <p class="max-w-4xl mx-auto text-center text-gray-600">At Nekoz, we're dedicated to bringing you the best toys and products to keep your furry friends happy, healthy, and entertained. Inspired by our own love for cats, we can't wait to share our curated collection.</p>
+    <img src="https://picsum.photos/500/300?cats" alt="Happy Cat" class="mx-auto mt-6 rounded-lg shadow w-full max-w-md" loading="lazy">
+</div>
+
+
+<footer class="text-center py-6 bg-white text-gray-600">
+    © 2023 Nekoz. All rights reserved.
+    <div class="mt-4">
+        <a href="https://facebook.com" target="_blank" class="mx-2"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com" target="_blank" class="mx-2"><i class="fab fa-instagram"></i></a>
+        <a href="https://pinterest.com" target="_blank" class="mx-2"><i class="fab fa-pinterest-p"></i></a>
+    </div>
+</footer>
+
+</body>
+</html>
