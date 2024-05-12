@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nekoz - Coming Soon</title>
+    <!-- SEO Enhancements -->
+    <meta name="description" content="Nekoz offers unique, high-quality toys and essentials for your feline friends. Get ready for our launch soon!">
+    <meta name="keywords" content="feline essentials, cat toys, nekoz, cat products, cat lovers">
+    <meta name="author" content="Nekoz">
+
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Montserrat:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.3.1/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -17,8 +22,22 @@
         .fade-in {
             animation: fadeIn 1.5s ease-in-out;
         }
+        /* Preloader Styles */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
         body {
             font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden; /* Prevents horizontal scrollbar */
         }
         .heading-font {
             font-family: 'Pacifico', cursive;
@@ -30,7 +49,19 @@
 </head>
 <body class="bg-gray-50">
 
-<header class="bg-pink-200 shadow py-4">
+<!-- Preloader -->
+<div id="preloader" class="fade-in">
+    <img src="images/loading_1.png" alt="Loading..." style="width: 100px; height: 100px;" class="w-24 h-24 rounded-full">
+</div>
+<script>
+    window.addEventListener('load', function() {
+        const preloader = document.getElementById('preloader');
+        preloader.classList.add('opacity-0');
+        setTimeout(() => { preloader.style.display = 'none'; }, 1500); // Wait for fade out before removing the element
+    });
+</script>
+
+<header class="bg-pink-200 shadow py-4 fade-in">
     <div class="container mx-auto flex justify-center">
         <div class="flex justify-end w-full max-w-screen-md">
             <img src="images/logo_2.png" alt="Nekoz Logo" class="h-8 mr-8">
@@ -41,32 +72,34 @@
 <div class="text-center py-12 bg-pink-200 fade-in">
     <h1 class="text-5xl font-bold text-gray-800 heading-font">Nekoz</h1>
     <p class="text-xl mt-2 text-gray-700 sub-heading-font">Everything For Your Feline Friends - Coming Soon!</p>
+    <!-- Unique Selling Proposition -->
+    <!-- <p class="text-xl mt-2 text-gray-700 sub-heading-font">Distinct craftsmanship for unparalleled comfort. Your pets deserve the best.</p> -->
     <p class="text-lg font-semibold text-gray-800 mt-4">Get ready for purrfect deals soon!</p>
 </div>
 
-<section class="text-center my-10">
-    <h2 class="text-3xl font-semibold mb-6">Featured Products</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mx-auto px-4">
-        <!-- Product 1 -->
-        <div class="bg-white rounded-lg shadow-lg p-6 text-center">
-            <img src="https://picsum.photos/200/200" alt="Product 1" class="mx-auto rounded-md mb-4">
-            <h3 class="font-semibold text-lg">Comfy Cat Hammock</h3>
-            <p class="text-sm text-gray-600 mt-2">Perfect for window-side lounging.</p>
-            <span class="mt-4 inline-block bg-gray-200 text-gray-800 py-2 px-4 rounded-full text-xs">Coming Soon</span>
+<section class="text-center my-8">
+    <h2 class="text-3xl font-semibold mb-4">Featured Products</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto px-4">
+        <!-- Product 1: Smart Cat Litter Box -->
+        <div class="bg-white rounded-lg shadow p-4 text-center max-w-sm mx-auto">
+            <img src="images/product_1.jpg" alt="CATLINK SCOOPER Luxury Pro - Smart Cat Litter Box" class="mx-auto mb-3 h-auto max-h-48 w-auto object-contain">
+            <h3 class="font-semibold text-lg">"Purrfection Clean" - Smart Litter Box</h3>
+            <p class="text-sm text-gray-600 mt-2">Self-cleaning box that keeps your home fresh, ensuring your cat's comfort and your peace of mind.</p>
+            <span class="mt-3 inline-block bg-gray-200 text-gray-800 py-2 px-4 rounded-full text-xs">Coming Soon</span>
         </div>
-        <!-- Product 2 -->
-        <div class="bg-white rounded-lg shadow-lg p-6 text-center">
-            <img src="https://picsum.photos/200/200" alt="Product 2" class="mx-auto rounded-md mb-4">
-            <h3 class="font-semibold text-lg">Interactive Laser Toy</h3>
-            <p class="text-sm text-gray-600 mt-2">Keep them entertained for hours.</p>
-            <span class="mt-4 inline-block bg-gray-200 text-gray-800 py-2 px-4 rounded-full text-xs">Coming Soon</span>
+        <!-- Product 2: Petgravity Smart Rotating Ball Toy -->
+        <div class="bg-white rounded-lg shadow p-4 text-center max-w-sm mx-auto">
+            <img src="images/product_2.jpg" alt="PetGravity - Interactive Feline Fun Ball" class="mx-auto mb-3 h-auto max-h-48 w-auto object-contain">
+            <h3 class="font-semibold text-lg">"Whisker Spinner" - Interactive Cat Toy</h3>
+            <p class="text-sm text-gray-600 mt-2">A smart ball that keeps your cat active and engaged, providing endless fun.</p>
+            <span class="mt-3 inline-block bg-gray-200 text-gray-800 py-2 px-4 rounded-full text-xs">Coming Soon</span>
         </div>
-        <!-- Product 3 -->
-        <div class="bg-white rounded-lg shadow-lg p-6 text-center">
-            <img src="https://picsum.photos/200/200" alt="Product 3" class="mx-auto rounded-md mb-4">
-            <h3 class="font-semibold text-lg">Luxury Cat Scratcher</h3>
-            <p class="text-sm text-gray-600 mt-2">Stylish and functional for your cat's pleasure.</p>
-            <span class="mt-4 inline-block bg-gray-200 text-gray-800 py-2 px-4 rounded-full text-xs">Coming Soon</span>
+        <!-- Product 3: Self Cleaning Pet Hair Brush -->
+        <div class="bg-white rounded-lg shadow p-4 text-center max-w-sm mx-auto">
+            <img src="images/product_3.jpg" alt="Magic Groom - Self-Cleaning Pet Brush" class="mx-auto mb-3 h-auto max-h-48 w-auto object-contain">
+            <h3 class="font-semibold text-lg">"Silky Whiskers" - Grooming Brush</h3>
+            <p class="text-sm text-gray-600 mt-2">A grooming brush with a self-cleaning feature for hassle-free care and a shiny coat.</p>
+            <span class="mt-3 inline-block bg-gray-200 text-gray-800 py-2 px-4 rounded-full text-xs">Coming Soon</span>
         </div>
     </div>
 </section>
@@ -85,10 +118,10 @@
 
 
 <!-- Moved About Us Section to end -->
-<div class="py-10 bg-gray-50">
+<div class="py-10 bg-gray-50 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-12">
     <h2 class="text-center text-3xl font-semibold mb-6">About Us</h2>
     <p class="max-w-4xl mx-auto text-center text-gray-600">At Nekoz, we're dedicated to bringing you the best toys and products to keep your furry friends happy, healthy, and entertained. Inspired by our own love for cats, we can't wait to share our curated collection.</p>
-    <img src="https://picsum.photos/500/300?cats" alt="Happy Cat" class="mx-auto mt-6 rounded-lg shadow w-full max-w-md" loading="lazy">
+    <img src="images/about_us.jpg" alt="Happy Cat" class="mx-auto mt-6 rounded-lg shadow w-full max-w-md h-auto" loading="lazy">
 </div>
 
 
