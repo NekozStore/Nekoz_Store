@@ -109,28 +109,28 @@
 </section>
 
 <!-- Enhanced Stay Notified Section with Lighter Background -->
-<!-- Stay Notified Form Section -->
-<section class="mt-16 bg-blue-100 text-center py-12">
-    <h2 class="text-4xl font-bold text-gray-800">Join Our Launch!</h2>
-    <p class="text-lg text-gray-600 mx-auto px-4 lg:px-0 my-8 max-w-4xl leading-relaxed">
+<!-- Join Our Launch Section with Improved Design -->
+<section class="mt-12 bg-pink-50 text-center py-8 px-4">
+    <h2 class="text-3xl font-bold text-gray-800">Join Our Launch!</h2>
+    <p class="text-md text-gray-600 mx-auto my-4 max-w-md leading-relaxed">
         Sign up to unlock exclusive launch deals and discounts for your feline friends.
     </p>
-    <!-- Form Section Content -->
-    <form id="launchForm" class="flex flex-col md:flex-row justify-center items-center mt-4 gap-4">
-        <input type="email" name="Email" placeholder="Enter your email address" required class="px-4 py-2 w-72 rounded-lg border-2 border-gray-200 focus:outline-none focus:border-blue-300 text-gray-700" aria-label="Email for newsletter">
-        <select name="Country" class="px-4 py-2 w-72 rounded-lg border-2 border-gray-200 focus:outline-none focus:border-blue-300 text-gray-700 bg-white" aria-label="Country selection">
-            <option value="" disabled selected>Select your country</option>
-            <option value="United States">United States</option>
-            <option value="Canada">Canada</option>
-            <option value="United Kingdom">United Kingdom</option>
-            <!-- Add more options as needed -->
-        </select>
-        <button type="submit" class="px-6 py-3 bg-pink-600 text-white rounded-lg hover:bg-pink-500 focus:outline-none transition duration-300">
-            Notify Me
-        </button>
-    </form>
-    <!-- Placeholder for the Thank You Message -->
-    <div id="thankYouMessage" class="hidden text-center py-4 mt-4 bg-blue-100 text-gray-800 rounded-lg">Thank you for signing up! We'll notify you once we launch.</div>
+    <div class="max-w-md mx-auto">
+        <form id="launchForm" class="space-y-3">
+            <input type="email" name="Email" placeholder="Your Email" required class="block w-full px-4 py-2 rounded-lg border-2 border-gray-200 focus:outline-none focus:border-blue-300 text-gray-700" aria-label="Email for newsletter">
+            <select name="Country" class="block w-full px-4 py-2 rounded-lg border-2 border-gray-200 focus:outline-none focus:border-blue-300 text-gray-700 bg-white" aria-label="Country selection">
+                <option value="" disabled selected>Your Country</option>
+                <option value="United States">United States</option>
+                <option value="Canada">Canada</option>
+                <option value="United Kingdom">United Kingdom</option>
+            </select>
+            <button type="submit" class="w-full px-4 py-2 bg-pink-600 text-white rounded-lg hover:bg-pink-500 focus:outline-none transition duration-300">
+                Notify Me
+            </button>
+        </form>
+    </div>
+    <!-- Thank You Message -->
+    <div id="thankYouMessage" class="hidden mt-4 text-center py-4 bg-pink-100 text-gray-800 rounded-lg">Thank you for signing up! We'll notify you once we launch.</div>
 </section>
 
 <script>
@@ -145,12 +145,17 @@ document.getElementById('launchForm').addEventListener('submit', function(e) {
         mode: 'no-cors', // This mode is for simplicity, it might result in an opaque response
     })
     .then(response => {
-        // Show the thank you message
-        document.getElementById('thankYouMessage').classList.remove('hidden');
-        // Optionally: Hide the form or clear it
-        // e.target.style.display = 'none'; // Hide form
-        e.target.reset(); // Clear form
-        setTimeout(() => { document.getElementById('launchForm').style.display = 'none'; }, 500); // Adjust as needed
+        // Successfully submitted the form
+        let form = document.getElementById('launchForm');
+        let thankYouMessage = document.getElementById('thankYouMessage');
+        
+        form.classList.add('opacity-0'); // Fade out the form
+        setTimeout(() => {
+            form.classList.add('hidden');
+            thankYouMessage.classList.remove('hidden');
+            thankYouMessage.classList.add('opacity-100');
+        }, 500); // Adjust timing as needed
+        e.target.reset(); // Clear the form
     })
     .catch((error) => {
         console.error('Error:', error);
