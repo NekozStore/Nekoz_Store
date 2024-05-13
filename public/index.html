@@ -99,7 +99,7 @@
         </div>
     </div>
 </header>
-
+<main>
 <div class="text-center py-12 bg-pink-200 fade-in">
     <h1 class="text-5xl font-bold text-gray-800 heading-font">Nekoz</h1>
     <p class="text-xl mt-2 text-gray-700 sub-heading-font">Everything For Your Feline Friends - Coming Soon!</p>
@@ -108,9 +108,10 @@
     <p class="text-lg font-semibold text-gray-800 mt-4">Get ready for purrfect deals soon!</p>
 </div>
 
-<section class="text-center my-8">
-    <h2 class="text-3xl font-semibold mb-4">Featured Products</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto px-4">
+<!-- products section  -->
+    <section class="text-center my-8">
+        <h3 class="text-3xl font-semibold mb-4">Featured Products</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-auto px-4">
         <!-- Product 1: Smart Cat Litter Box -->
         <div class="bg-white rounded-lg shadow p-4 text-center max-w-sm mx-auto">
             <img src="images/product_1.jpg" alt="CATLINK SCOOPER Luxury Pro - Smart Cat Litter Box" class="mx-auto mb-3 h-auto max-h-48 w-auto object-contain">
@@ -138,14 +139,17 @@
 <!-- Enhanced Stay Notified Section with Lighter Background -->
 <!-- Join Our Launch Section with Improved Design -->
 <section class="mt-12 bg-pink-50 text-center py-8 px-4">
-    <h2 class="text-3xl font-bold text-gray-800">Join Our Launch!</h2>
+    <h3 class="text-3xl font-bold text-gray-800">Join Our Launch!</h3>
     <p class="text-md text-gray-600 mx-auto my-4 max-w-md leading-relaxed">
         Sign up to unlock exclusive launch deals and discounts for your feline friends.
     </p>
     <div class="max-w-md mx-auto">
         <form id="launchForm" class="space-y-3">
-            <input type="email" name="Email" placeholder="Your Email" required class="block w-full px-4 py-2 rounded-lg border-2 border-gray-200 focus:outline-none focus:border-blue-300 text-gray-700" aria-label="Email for newsletter">
-            <select name="Country" class="block w-full px-4 py-2 rounded-lg border-2 border-gray-200 focus:outline-none focus:border-blue-300 text-gray-700 bg-white" aria-label="Country selection">
+            <!-- Screen-reader-only labels for accessibility -->
+            <label for="email" class="sr-only">Email:</label>
+            <input id="email" type="email" name="Email" placeholder="Your Email" required class="block w-full px-4 py-2 rounded-lg border-2 border-gray-200 focus:outline-none focus:border-blue-300 text-gray-700">
+            <label for="country" class="sr-only">Country:</label>
+            <select id="country" name="Country" class="block w-full px-4 py-2 rounded-lg border-2 border-gray-200 focus:outline-none focus:border-blue-300 text-gray-700 bg-white">
                 <option value="" disabled selected>Your Country</option>
                 <option value="United States">United States</option>
                 <option value="Canada">Canada</option>
@@ -198,7 +202,7 @@ document.getElementById('launchForm').addEventListener('submit', function(e) {
     <img src="images/about_us.jpg" alt="Happy Cat" class="mx-auto mt-6 rounded-lg shadow w-full max-w-md h-auto" loading="lazy">
 </div>
 
-
+</main>
 <footer class="text-center py-6 bg-white text-gray-600">
     © 2023 Nekoz. All rights reserved.
     <div class="mt-4">
